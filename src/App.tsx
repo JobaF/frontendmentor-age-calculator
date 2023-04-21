@@ -226,7 +226,7 @@ function App() {
 					</button>
 					<span className="absolute w-4/5 h-0.5 bg-gray-300 z-0" />
 				</div>
-				<div className="h-3/5 w-full text-center flex flex-col justify-stat pt-5 text-4xl gap-5 font-bold">
+				<div className="h-3/5 w-full text-center flex flex-col justify-stat pt-5 text-2xl gap-5 font-bold">
 					<p>
 						<span className="text-purple-700">
 							{timeToDate.year && timeToDate.year}
