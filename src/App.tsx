@@ -80,6 +80,16 @@ function App() {
 						year: durationBetweenDates.years || 0,
 					})
 				}
+			} else {
+				const buttonElement = document.getElementById("calcButton")
+				if (buttonElement) {
+					buttonElement?.classList.add("bg-red-500")
+					buttonElement?.classList.add("animate-wiggle")
+					setTimeout(function () {
+						buttonElement?.classList.remove("bg-red-500")
+						buttonElement?.classList.remove("animate-wiggle")
+					}, 1000)
+				}
 			}
 		}
 	}
@@ -146,7 +156,7 @@ function App() {
 							DAY
 						</label>
 						<input
-							className={`w-16 h-10 rounded-md border-gray-300 border text-center text-lg font-bold shadow-lg ${
+							className={`w-16 h-10 rounded-md border-gray-300 border text-center text-lg font-bold shadow-lg focus:outline-none focus:ring-purple-700 focus:ring-2 ${
 								invalidInputFields.dayInvalid ? "border-red-600" : ""
 							}`}
 							type="text"
@@ -170,7 +180,7 @@ function App() {
 							MONTH
 						</label>
 						<input
-							className={`w-16 h-10 rounded-md border-gray-300 border text-center text-lg font-bold shadow-lg ${
+							className={`w-16 h-10 rounded-md border-gray-300 border text-center text-lg font-bold shadow-lg focus:outline-none focus:ring-purple-700 focus:ring-2 ${
 								invalidInputFields.monthInvalid ? "border-red-600" : ""
 							}`}
 							type="text"
@@ -195,7 +205,7 @@ function App() {
 							YEAR
 						</label>
 						<input
-							className={`w-16 h-10 rounded-md border-gray-300 border text-center text-lg font-bold shadow-lg ${
+							className={`w-16 h-10 rounded-md border-gray-300 border text-center text-lg font-bold shadow-lg focus:outline-none focus:ring-purple-700 focus:ring-2 ${
 								invalidInputFields.yearInvalid ? "border-red-600" : ""
 							}`}
 							type="text"
